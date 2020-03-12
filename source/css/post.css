@@ -1,0 +1,99 @@
+#post{
+    font-family: Consolas;
+}
+
+#post .tittle{
+    text-align:center;
+}
+
+#post-content{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width:200px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #212529;
+}
+
+#post-content:hover{
+    overflow: auto;
+}
+
+#post-content::-webkit-scrollbar{
+    background-color: #212529;
+}
+
+#post-content::-webkit-scrollbar-thumb{
+    background-color: #495057;
+}
+
+#post-content .entry{
+    margin: 0;
+    color:#868e96;
+    cursor: pointer;
+}
+
+#post-content .entry:hover{
+    color:#ced4da;
+    background-color: #343a40;
+}
+
+#post-content .container{
+    border-left: 1px solid #ffffff00;
+}
+
+#post-content .container:hover{
+    border-left: 1px solid #343a40;
+}
+
+#post-content div{
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#post-content .btn{
+    border: 1px solid #ffffff00;
+}
+
+#post-content .btn:hover{
+    border: 1px solid #ffffff;
+}
+
+#post-content .btn-fold-all{
+    border: 1px solid #ffffff00;
+}
+
+#post-content .btn-fold-all:hover{
+    border: 1px solid #ffffff;
+}
+
+#post-content .btn-unfold-all{
+    border: 1px solid #ffffff00;
+}
+
+#post-content .btn-unfold-all:hover{
+    border: 1px solid #ffffff;
+}
+
+#post-content .padding{
+    border: 1px solid #ffffff00;
+    color:#ffffff00;
+}
+
+#post-grid{
+    display:grid;
+    grid-template-columns:200px auto 0;
+}
+
+#post-text{
+    padding:10px 10px;
+}
+
+#btn-content{
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    position:fixed;
+    color:black;
+}

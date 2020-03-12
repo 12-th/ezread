@@ -1,0 +1,42 @@
+<%- js("js/index.js") %>
+<%- css('css/index.css') %>
+<div class="index">
+    <%- partial('partial/header.ejs') %>
+    <div id="website-info">
+        <span id="site-tittle"><%- config.title %></span>
+        <span id="site-subtitle"><%- config.subtitle %></span>
+        <span id="site-description"><%- config.description %></span>
+    </div>
+    <div id="articles">
+        <div></div>
+        <div id="article-list">
+            <% page.posts.each(function(post){ %>
+            <div class="per-post">
+                <div class="post-metadata">
+                    <h1 class="post-tittle"><%- post.title %></h1>
+                </div>
+                <div class="post-split-line-grid">
+                    <div></div>
+                    <div class="post-split-line"></div>
+                    <div></div>
+                </div>
+                <div>
+                    <% if(!post.excerpt) { %>
+                        <%- partial('partial/article', {text: post.content }) %>
+                    <% } else { %> 
+                        <%- partial('partial/article', {text: post.excerpt}) %>
+                    <% } %> 
+                </div>
+                <div class="post-more-grid">
+                    <div></div>
+                    <div class="more">
+                        <a class="link-more" href="<%- url_for(post.path) %>">more</a>
+                    </div>
+                </div>
+            </div>
+            <%}) %>
+        </div>
+        <div></div>
+    </div>
+
+</div>
