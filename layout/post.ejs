@@ -1,23 +1,23 @@
 <div id='post'>
     <%- css('css/post.css') %>
-    <%- js('js/post.js') %> 
+    <%- js('js/post.js') %>
 
-    <%- partial('partial/header') %> 
+    <%- partial('partial/header') %>
     <span id='btn-content'>&#8678;</span>
     <div id="post-content"></div>
     <div id="post-grid">
         <div></div>
         <div id="post-text">
             <h1 class='tittle'>
-                <% if(page.title) { %> 
-                    <%- page.title %>
-                  <% } else { %> 
-                    <%- config.title %> 
-                <% } %> 
+                <% if(page.title) { %>
+                <%- page.title %>
+                <% } else { %>
+                <%- config.title %>
+                <% } %>
             </h1>
             <%- partial('partial/article', {text: page.content}) %>
         </div>
         <div></div>
     </div>
+    <%- partial('partial/footer') %> 
 </div>
-

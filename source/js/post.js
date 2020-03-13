@@ -36,19 +36,25 @@ function buildContents() {
 
   function NodeToHtml(anchor, extradata, name, nextLevel) {
     let res = '';
-    let button = '';
-    if (name === '') name = 'unkonwn';
-    if (nextLevel !== '')
-      button = '<span class="btn">-</span>&ensp;';
-    else
-      button = '<span class="padding">&ensp;</span>&ensp;';
-    if (anchor !== '')
-      res += '<div class="entry" data-href="' + anchor + '">' + button +
-          extradata + name + '</div>';
-    else
-      res += '<div class="entry">' + extradata + name + '</div>';
-    if (nextLevel !== '')
-      res += '<div class="container">' + nextLevel + '</div>';
+    if (extradata === '') {
+      let button = '';
+      if (name === '') name = '&nbsp';
+      if (nextLevel !== '')
+        button = '<span class="btn">-</span>&ensp;';
+      else
+        button = '<span class="padding">&ensp;</span>&ensp;';
+      if (anchor !== '')
+        res += '<div class="entry" data-href="' + anchor + '">' + button +
+            name + '</div>';
+      else
+        res += '<div class="entry">' + name + '</div>';
+      if (nextLevel !== '')
+        res += '<div class="container">' + nextLevel + '</div>';
+      return res;
+    }
+
+    res = '<div class="entry content-tittle">' + extradata + name + '</div>' +
+        '<div class="container">' + nextLevel + '</div>';
     return res;
   }
 
@@ -73,7 +79,7 @@ function buildContents() {
       }
       let extradata = '<span class="btn-fold-all">-</span>&ensp;' +
           '<span class="btn-unfold-all">+</span>&ensp;';
-      return NodeToHtml('', extradata, 'summary', tmp);
+      return NodeToHtml('', extradata, $(document).attr('title'), tmp);
     }
     return undefined;
   }
@@ -90,8 +96,7 @@ function buildContents() {
     }
   });
   stackMerge(1);
-  if(stack[0].child.length==1)
-  {
+  if (stack[0].child.length == 1) {
     return convertToContents(stack[0].child[0]);
   }
   return convertToContents(stack[0]);
@@ -102,11 +107,15 @@ function contentInit() {
   if (content_text) {
     $('#post-content').append(content_text);
   }
-  $('#post-content .entry').on('click', function(e) {
+  $('#post-content .entry').on('click', function() {
     let href = $(this).attr('data-href');
     if (href) {
-      document.getElementById(href).scrollIntoView();
+      let top = $('#' + href).offset().top;
+      $('html,body').animate({scrollTop: top}, 'slow');
     }
+  });
+  $('#post-content .content-tittle').on('click', function() {
+    $('html,body').animate({scrollTop: '0px'}, 'slow');
   });
 }
 
@@ -134,11 +143,11 @@ function btn_content_click() {
   let content = $('#post-content');
   if (btn.text() === '⇦') {
     btn.text('⇨');
-    grid.css({'grid-template-columns': '100px auto 100px'});
+    grid.css({'grid-template-columns': '125px auto 125px'});
     content.hide();
   } else {
     btn.text('⇦');
-    grid.css({'grid-template-columns': '200px auto'});
+    grid.css({'grid-template-columns': '250px auto'});
     content.show();
   }
 }
@@ -188,4 +197,6 @@ $(function() {
   $('#post-content .btn').on('click', content_fold_btn_click);
   $('#post-content .btn-fold-all').on('click', content_fold_all);
   $('#post-content .btn-unfold-all').on('click', content_unfold_all);
+  content_fold_all();
+  $('#btn-content').click();
 })

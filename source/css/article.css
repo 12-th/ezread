@@ -3,6 +3,8 @@
     text-decoration: none;
     padding:0 10px;
     font-family: Consolas;
+    border-left: 1px dotted #ced4da;
+    border-right: 1px dotted #ced4da;
 }
 
 .article-text a{
@@ -19,18 +21,77 @@
     background-color: #272822;
     color: #868e96;
     font-family: Consolas;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin:0 20px;
+    margin:5px auto;
+    border-radius: 2px;
+    border-left: 3px solid #0b7285;
 }
 
 .article-text .gutter{
     color: #495057;
-    padding-right: 10px;
     text-align:right;
+    padding-right: 10px;
+    display:inline-table;
 }
 
-.article-text pre{
+.article-text .code{
+    display:inline-table;
+}
+
+.article-text .gutter pre{
+    margin: 0;
     font-family:Consolas;
+}
+
+.article-text .code pre{
+    margin: 0;
+    font-family:Consolas;
+}
+
+.article-text p{
+    margin: 8px auto;
+}
+.article-text ul{
+    margin: 8px auto;
+}
+.article-text ul li{
+    margin:4px auto;
+}
+
+.article-text h1{
+    margin:20px auto;
+    border-bottom:2px solid #868e96;
+    padding-bottom: 5px;
+}
+
+.article-text h2{
+    margin:20px auto;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    border-bottom:2px dotted #868e96;
+}
+
+.article-text h3{
+    margin:20px auto;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.article-text h4{
+    margin:20px auto;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.article-text h5{
+    margin:20px auto;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+.article-text h6{
+    margin:20px auto;
+    padding-left: 20px;
+    padding-bottom: 5px;
 }
 
 .article-text .keyword{

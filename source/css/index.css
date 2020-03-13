@@ -63,26 +63,24 @@
     background-color: #202020;
 }
 
-.post-more-grid{
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-items:right;
-    align-items:bottom;
-    margin-right: 25px;
-    margin-bottom: 10px;
+.post-more{
+    text-align:right;
+    padding:5px 10px;
 }
 
-.post-more-grid .more .link-more{
-    padding: 5px 0 2px 0;
-    font-size: 20px;
+.post-more .btn-more{
+    margin:5px 10px;
+    font-size: 15px;
     cursor: pointer;
     border-bottom: 3px solid;
     text-decoration: none;
     border-color: rgb(58,191,196);
     color: rgb(58,191,196);
+    bottom:0;
+    right: 0;
 }
 
-.post-more-grid .more .link-more:hover{
+.post-more .btn-more:hover{
     color:red;
     border-color: red;
 }

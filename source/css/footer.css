@@ -1,0 +1,34 @@
+#footer #btn-to-top{
+    position: fixed;
+    bottom:10px;
+    right:20px;
+    font-size: 25px;
+    cursor: pointer;
+    color:black;
+}
+
+#footer #theme-info{
+    background-color:#343a40;
+    height:50px;
+    text-align: center;
+    vertical-align:middle;
+}
+
+#footer #theme-info span{
+    display: block;
+    margin:0 auto;
+    bottom:0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#495057;
+}
+
+#footer #theme-info a{
+    text-decoration: none;
+    color:#868e96;
+}
+
+#footer #theme-info a:hover{
+    color:#adb5bd
+}

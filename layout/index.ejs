@@ -22,21 +22,18 @@
                 </div>
                 <div>
                     <% if(!post.excerpt) { %>
-                        <%- partial('partial/article', {text: post.content }) %>
-                    <% } else { %> 
-                        <%- partial('partial/article', {text: post.excerpt}) %>
-                    <% } %> 
+                    <%- partial('partial/article', {text: post.content }) %>
+                    <% } else { %>
+                    <%- partial('partial/article', {text: post.excerpt}) %>
+                    <% } %>
                 </div>
-                <div class="post-more-grid">
-                    <div></div>
-                    <div class="more">
-                        <a class="link-more" href="<%- url_for(post.path) %>">more</a>
-                    </div>
+                <div class="post-more">
+                    <a class="btn-more" href="<%- url_for(post.path) %>">more</a>
                 </div>
             </div>
             <%}) %>
         </div>
         <div></div>
     </div>
-
+    <%- partial('partial/footer') %>
 </div>
