@@ -4,7 +4,6 @@
     padding:0 10px;
     font-family: Consolas;
     border-left: 1px dotted #ced4da;
-    border-right: 1px dotted #ced4da;
 }
 
 .article-text a{
@@ -19,7 +18,7 @@
 
 .article-text figure{
     background-color: #272822;
-    color: #868e96;
+    color: #adb5bd;
     font-family: Consolas;
     margin:0 20px;
     margin:5px auto;
@@ -49,9 +48,13 @@
 }
 
 .article-text p{
-    margin: 8px auto;
+    text-indent: 2em;
+    margin: 2px auto;
 }
 .article-text ul{
+    margin: 8px auto;
+}
+.article-text ol{
     margin: 8px auto;
 }
 .article-text ul li{
@@ -127,10 +130,72 @@
     color: #E6DB74;
 }
 
+.article-text figure .comment{
+    color: #495057;
+    font-style: italic;
+}
+
+.article-text>table{
+    margin : auto auto;
+    padding:3px 10px;
+    border-collapse: collapse; 
+}
+.article-text>table thead tr{
+    border-bottom: 2px solid black;
+}
+
+.article-text>table tr{
+    border-bottom: 1px solid black;
+}
+
+.article-text>table td,th{
+    padding:5px 10px 3px 10px;
+}
+
 .article-text blockquote{
     background-color: #303030;
     color: #868e96;
     margin: auto 20px;
     padding-left: 20px;
     border-left: 3px solid rgb(3, 169, 244);
+}
+
+.article-text figure .btns{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.article-text figure .fold{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #ffffff00;
+    padding:2px 2px;
+}
+
+.article-text figure .copy{
+    display: inline;
+    border: 1px solid #ffffff00;
+    padding:2px 2px;
+}
+
+.article-text figure .fold:hover{
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+
+.article-text figure .copy:hover{
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+
+.article-text img{
+    margin: 0 auto;
+    display: block;
+}
+
+.article-text code{
+    background-color: #e9ecef;
+    border-radius: 2px;
+    padding: 2px;
+    border:1px solid #dee2e6;
 }
