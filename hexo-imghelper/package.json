@@ -1,0 +1,16 @@
+{
+    "name": "hexo-imghelper",
+    "version": "0.0.1",
+    "description": "a plugin allows you put your images and .md in the same directory",
+    "main": "index",
+    "keywords": [
+      "hexo",
+      "images"
+    ],
+    "author": "12-th",
+    "license": "MIT",
+    "dependencies": {
+      "hexo-fs": "^0.2.3",
+      "hexo-log": "^0.2.0"
+    }
+  }
