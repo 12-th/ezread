@@ -1,99 +1,135 @@
 #post{
+    width: 100%;
+    height: 100%;
     font-family: Consolas;
 }
 
-#post .tittle{
-    text-align:center;
+#post .post-btns{
+    position: fixed;
+    left:5px;
+    top:0px;
+    z-index: 2;
+    height: 50px;
 }
 
-#post-content{
-    position:fixed;
+#post .sidebar{
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+}
+
+#post .btn-toc{
+    position: absolute;
+    /* display: inline-block; */
+    bottom: 0px;
+    left: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+}
+
+#post .tittle {
+    text-align: center;
+}
+
+#post .div-toc {
+    position: fixed;
+    top: 50px;
     bottom: 0;
     left: 0;
-    width:250px;
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: #212529;;
-}
-
-#post-content:hover{
+    width: 250px;
     overflow: auto;
+    white-space: nowrap;
+    background-color: #212529;
+    z-index: 1;
 }
 
-#post-content::-webkit-scrollbar{
+#post .div-toc::-webkit-scrollbar {
     background-color: #212529;
 }
 
-#post-content::-webkit-scrollbar-thumb{
+#post .div-toc::-webkit-scrollbar-thumb {
     background-color: #495057;
 }
 
-#post-content .entry{
-    margin: 0;
-    color:#868e96;
+#post .div-toc .link-wrapper,.div-btnfold{
     cursor: pointer;
+    color: #868e96;
 }
 
-#post-content .entry:hover{
-    color:#ced4da;
+#post .div-toc .link-wrapper:hover,.div-btnfold:hover{
+    color: #ced4da;
     background-color: #343a40;
 }
 
-#post-content .container{
-    border-left: 1px solid #ffffff00;
-}
-
-#post-content .container:hover{
-    border-left: 1px solid #343a40;
-}
-
-#post-content div{
-    margin-left: 5px;
-    padding-left: 5px;
-}
-
-#post-content .btn{
+#post .div-toc .padding{
     border: 1px solid #ffffff00;
-}
-
-#post-content .btn:hover{
-    border: 1px solid #ffffff;
-}
-
-#post-content .btn-fold-all{
-    border: 1px solid #ffffff00;
-}
-
-#post-content .btn-fold-all:hover{
-    border: 1px solid #ffffff;
-}
-
-#post-content .btn-unfold-all{
-    border: 1px solid #ffffff00;
-}
-
-#post-content .btn-unfold-all:hover{
-    border: 1px solid #ffffff;
-}
-
-#post-content .padding{
-    border: 1px solid #ffffff00;
-    color:#ffffff00;
-}
-
-#post-grid{
-    display:grid;
-    grid-template-columns:250px auto 0;
-}
-
-#post-text{
-    padding:10px 10px;
-}
-
-#btn-content{
-    font-size: 25px;
+    padding: 0px 2px;
     cursor: pointer;
-    margin-left: 10px;
-    position:fixed;
-    color:black;
+    margin-right: 5px;
+}
+
+#post .div-toc .btn-fold,.btn-fold-all,.btn-unfold-all{
+    border: 1px solid #ffffff00;
+    padding: 0px 2px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #868e96;
+}
+
+#post .div-toc .btn-fold:hover,.btn-fold-all:hover,.btn-unfold-all:hover{
+    border: 1px solid #fefefe;
+    padding: 0px 2px;
+}
+
+#post .div-toc a {
+    text-decoration: none;
+    margin: 0;
+    color: #868e96;
+    cursor: pointer;
+}
+
+#post .div-toc .div-toc-child {
+    border-left: 1px dotted #ffffff00;
+}
+#post .div-toc .div-toc-child:hover {
+    border-left: 1px dotted grey;
+}
+
+#post .div-toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+#post .post-foot-grid{
+    display:grid;
+    grid-template-rows: auto 50px;
+}
+
+#post .foot{
+    /* width: 100%; */
+    bottom: 0px;
+    z-index: 0;
+}
+
+#post .post-grid{
+    position: relative;
+    display:grid;
+    grid-template-columns: 250px auto;
+}
+
+#post .padding{
+    height: 100%;
+}
+#post .text{
+    padding-top: 50px;
+    padding-bottom:50px;
+}
+
+#post .btn-to-top{
+    position: fixed;
+    right: 60px;
+    bottom: 50px;
 }

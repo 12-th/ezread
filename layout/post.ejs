@@ -1,29 +1,39 @@
 <div id='post'>
     <%- css('css/post.css') %>
-    <%- css('css/header.css') %>
+    <%- css('css/sidebar.css') %>
     <%- css('css/footer.css') %>
     <%- css('css/article.css') %>
+    <%- css('css/btn-to-top.css')%> 
     <%- js('js/article.js') %>
     <%- js('js/post.js') %>
-    <%- js('js/header.js') %>
+    <%- js('js/sidebar.js') %>
     <%- js('js/footer.js') %>
+    <%- js('js/btn-to-top.js') %> 
 
-    <%- partial('partial/header') %>
-    <span id='btn-content'>&#8678;</span>
-    <div id="post-content"></div>
-    <div id="post-grid">
-        <div></div>
-        <div id="post-text">
-            <h1 class='tittle'>
-                <% if(page.title) { %>
-                <%- page.title %>
-                <% } else { %>
-                <%- config.title %>
-                <% } %>
-            </h1>
-            <%- partial('partial/article', {text: page.content}) %>
-        </div>
-        <div></div>
+    <div class="post-btns">
+        <div class="sidebar"><%- partial('partial/sidebar.ejs') %></div>
+        <div class="btn-toc">⇦</div>
     </div>
-    <%- partial('partial/footer') %> 
+    <div class="div-toc">
+            <%- toc(page.content, {class: "toc", list_number:false}) %>
+    </div>
+    <div class="post-foot-grid">
+        <div class="post-grid">
+            <div class="padding"></div>
+            <div class="text">
+                <h1 class='tittle'>
+                    <% if(page.title) { %>
+                    <%- page.title %>
+                    <% } else { %>
+                    <%- config.title %>
+                    <% } %>
+                </h1>
+                <%- partial('partial/article', {text: page.content}) %>
+            </div>
+        </div>
+        <div class="foot"><%- partial('partial/footer') %> </div>
+    </div>
+    <div class="btn-to-top"><%- partial('partial/btn-to-top') %></div>
+    <!-- <span id='btn-content'>&#8678;</span> -->
 </div>
+

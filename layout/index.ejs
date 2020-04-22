@@ -1,43 +1,31 @@
 <%- js("js/index.js") %>
 <%- js("js/article.js") %>
 <%- js('js/footer.js') %>
+<%- js('js/sidebar.js') %>
+<%- js('js/excerpt.js') %> 
 <%- css('css/index.css') %>
 <%- css('css/article.css') %>
 <%- css('css/footer.css') %>
-<div class="index">
-    <%- partial('partial/header.ejs') %>
+<%- css('css/sidebar.css') %>
+<%- css('css/excerpt.css') %> 
+<div class="sidebar"><%- partial('partial/sidebar') %></div>
+<div class="index-grid">
     <div id="website-info">
+        <div id="site-strings" style="display:none"><%- config.ezread.description %></div>
         <span id="site-tittle"><%- config.title %></span>
-        <span id="site-subtitle"><%- config.subtitle %></span>
-        <span id="site-description"><%- config.description %></span>
+        <span id="site-description"></span>
     </div>
     <div id="articles">
         <div></div>
         <div id="article-list">
             <% page.posts.each(function(post){ %>
-            <div class="per-post">
-                <div class="post-metadata">
-                    <h1 class="post-tittle"><%- post.title %></h1>
-                </div>
-                <div class="post-split-line-grid">
-                    <div></div>
-                    <div class="post-split-line"></div>
-                    <div></div>
-                </div>
-                <div>
-                    <% if(!post.excerpt) { %>
-                    <%- partial('partial/article', {text: post.content }) %>
-                    <% } else { %>
-                    <%- partial('partial/article', {text: post.excerpt}) %>
-                    <% } %>
-                </div>
-                <div class="post-more">
-                    <a class="btn-more" href="<%- url_for(post.path) %>">more</a>
-                </div>
-            </div>
+                <% if(!post.excerpt) { %>
+                <%- partial('partial/excerpt', {excerpt: post.content, tittle: post.title, url: post.path}) %>
+                <% } else { %>
+                <%- partial('partial/excerpt', {excerpt: post.excerpt, tittle: post.title, url: post.path}) %>
+                <% } %>
             <%}) %>
         </div>
-        <div></div>
     </div>
     <%- partial('partial/footer') %>
 </div>

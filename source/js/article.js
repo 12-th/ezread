@@ -2,10 +2,9 @@ $(function() {
     let codes = $('.article-text figure');
     codes.each(function(){
         $(this).prepend(
-        '<div class="btns">'+
+        '<div class="article-btns">'+
         '<div class="fold">-</div>'+
         '<div class="copy">copy</div>'+
-        '<div></div>'+
         '</div>');
     });
     let btn_fold = $('.article-text .fold');

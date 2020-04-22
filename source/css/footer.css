@@ -1,34 +1,31 @@
-#footer #btn-to-top{
-    position: fixed;
-    bottom:10px;
-    right:20px;
-    font-size: 25px;
-    cursor: pointer;
-    color:black;
-}
-
-#footer #theme-info{
+#footer{
     background-color:#343a40;
-    height:50px;
+    height: 100%;
+    display: grid;
+    align-items:center;
+    padding: 10px 0;
+}
+
+#footer .theme-info{
+    vertical-align:text-top;
     text-align: center;
-    vertical-align:middle;
-}
-
-#footer #theme-info span{
-    display: block;
-    margin:0 auto;
-    bottom:0;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     color:#495057;
+    width: 100%;
 }
 
-#footer #theme-info a{
+#footer .about-me{
+    vertical-align:text-top;
+    text-align: center;
+    color:#495057;
+    width: 100%;
+    font-size: 12px;
+}
+
+#footer a{
     text-decoration: none;
     color:#868e96;
 }
 
-#footer #theme-info a:hover{
+#footer a:hover{
     color:#adb5bd
 }
