@@ -80,4 +80,8 @@ function TocAddButton()
 $(function() {
   // '⇨''⇦'
   TocAddButton();
+  setTimeout(function(){
+    $("#post .btn-toc").click();
+  }, 750);
+  
 })
