@@ -11,10 +11,13 @@ function JoinTitle(url, title){
 function InitArchiveList() {
   let info = JSON.parse($('#archives-info').text());
   info.posts.sort(function(a, b) {
-    if (a < b) return -1;
-    if (b < a) return 1;
+    if (a.date < b.date) return 1;
+    if (b.date < a.date) return -1;
     return 0;
   });
+  info.posts.forEach(function(post){
+    console.log(post.date);
+  })
   let lastDate = undefined;
   let titles = '';
   let list = $('#archives .list');
