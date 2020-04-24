@@ -1,0 +1,23 @@
+#website-info{
+    text-align: center;
+    padding : 10px 0;
+    width:auto;
+    color:#f8f9fa;
+    background-color: #343a40;
+    margin-bottom: 50px;
+}
+
+#site-tittle{
+    display: inline-block;
+    font-size:40px;
+    font-family: Consolas;
+    margin-right: 10px;
+}
+
+#site-description{
+    display: inline-block;
+    font-size: 15px;
+    font-family: Consolas;
+    margin-top: 10px;
+    margin-right: 10px;
+}

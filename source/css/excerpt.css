@@ -28,7 +28,7 @@
     border-top: solid 1px #f1f3f5;
     text-align: center;
     background-color: #fafafa;
-    color:#228be6;
+    color:#3bc9db;
     font-size: 20px;
 }
 
@@ -36,4 +36,8 @@
     background-color:  #f1f3f5;
     cursor: pointer;
     color:red;
+}
+
+.excerpt:last-child{
+    margin-bottom: 20px;
 }

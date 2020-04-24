@@ -3,18 +3,16 @@
 <%- js('js/footer.js') %>
 <%- js('js/sidebar.js') %>
 <%- js('js/excerpt.js') %> 
+<%- js('js/header.js') %> 
 <%- css('css/index.css') %>
 <%- css('css/article.css') %>
 <%- css('css/footer.css') %>
 <%- css('css/sidebar.css') %>
 <%- css('css/excerpt.css') %> 
+<%- css('css/header.css') %> 
 <div class="sidebar"><%- partial('partial/sidebar') %></div>
 <div class="index-grid">
-    <div id="website-info">
-        <div id="site-strings" style="display:none"><%- config.ezread.description %></div>
-        <span id="site-tittle"><%- config.title %></span>
-        <span id="site-description"></span>
-    </div>
+    <div><%- partial('partial/header.ejs') %> </div>
     <div id="articles">
         <div></div>
         <div id="article-list">
@@ -28,5 +26,13 @@
         </div>
         <div></div>
     </div>
-    <%- partial('partial/footer') %>
+    <div id="pageinator"><%- paginator({
+        prev_text: '<',
+        next_text: '>',
+        end_size: 3,
+        mid_size: 5
+      }) %></div>
+    <div class="foot">
+        <%- partial('partial/footer') %>
+    </div>
 </div>

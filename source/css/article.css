@@ -3,7 +3,10 @@
     text-decoration: none;
     padding:0 10px;
     font-family: Consolas;
+    border: 1px solid #dee2e6;
     border-left: 1px dotted #ced4da;
+    background-color: #f8f9fa;
+    border-radius: 5px;
 }
 
 .article-text a{

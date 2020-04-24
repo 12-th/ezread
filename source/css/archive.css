@@ -1,0 +1,135 @@
+
+#archives{
+    width: 100%;
+}
+
+#archives .head{
+    width: 100%;
+    position: relative;
+    top:0;
+}
+.sidebar{
+    position: fixed;
+    left:20px;
+    top:0px;
+    z-index: 3;
+}
+
+#archives .archive-grid{
+    display:grid;
+    grid-template-rows: auto auto auto;
+    width:100%;
+}
+
+#archives .content-grid{
+    display:grid;
+    grid-template-columns: 125px auto 125px;
+    margin-bottom: 20px;
+    min-width: 500px;
+}
+
+#archives .list{
+    position: relative;
+    height: 100%;
+}
+
+#archives .list .time-line{
+    position:absolute;
+    background-image: linear-gradient(#ff922b, #ffd8a8);
+    left: -10px;
+    top:0;
+    width:2px;
+    height: 100%;
+    content:'';
+    display: block;
+}
+
+#archives .list .item{
+    position: relative;
+    min-height: 30px;
+    min-width:300px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#archives .list .item .icon{
+    content:"";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border:1px solid #5FB878;
+    border-radius: 50%;
+    text-align: center;
+    cursor:pointer;
+}
+
+#archives .list .item .icon:hover{
+    border:1px solid red;
+}
+
+#archives .list .item .date{
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #adb5bd;
+    color: #f8f9fa;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border:1px solid #dee2e6;
+    border-bottom: none;
+    border-left: 2px;
+}
+
+#archives .list .item .date:hover{
+    background-color:  #212529;
+    color: #ffffff;
+}
+
+#archives .list .item .date .fold{
+    margin-left: 1em;
+    margin-right: 2em;
+}
+
+#archives .titles{
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 3px;
+    border-top: none;
+    border-left: 2px solid #38d9a9;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color:#339af0;
+}
+
+#archives .titles a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#339af0;
+    display:block;
+    padding: 3px 20px;
+    border-left: 2px solid #ffffff00;
+}
+
+#archives .titles a:hover{
+    color: red;
+    border-left: 2px #ffffff00;
+}
+
+#archives .titles .title-wrapper{
+    border-bottom: 1px solid #f1f3f5;
+}
+
+#archives .titles .title-wrapper:hover{
+    background-color:  #ffffff;
+}
+
+#archives .foot{
+    height: 50px;
+    position: absolute;
+    bottom:100%-50px;
+    left: 0px;
+    right: 100%;
+    width:100%;
+}

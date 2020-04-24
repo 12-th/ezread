@@ -3,4 +3,5 @@ body{
     background-image: linear-gradient(to left, #ebebeb 0%, #fcfcfc 50%, #ebebeb 100%);
     color:#495057;
     font-family: Consolas;
+    min-height: 100%;
 }

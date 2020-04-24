@@ -6,6 +6,10 @@
     padding: 10px 0;
 }
 
+#footer span{
+    display: inline-block;
+}
+
 #footer .theme-info{
     vertical-align:text-top;
     text-align: center;

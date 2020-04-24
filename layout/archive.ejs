@@ -1,0 +1,38 @@
+<%- css('css/archive.css') %> 
+<%- css('css/footer.css') %>
+<%- css('css/sidebar.css') %> 
+<%- css('css/header.css') %> 
+<%- js('js/archive.js') %>
+<%- js('js/footer.js') %> 
+<%- js('js/sidebar.js') %> 
+<%- js('js/header.js') %> 
+
+<% let info = {posts:[], next:"", isIndex:false} %>
+<% site.posts.forEach(function(post, i){
+     info.posts.push({date: post.date.format("YYYY-MM-DD hh:mm:ss"),
+                title: post.title,
+                url: url_for(post.path)
+                }) 
+    });
+    info.next=page.next_link;
+    info.isIndex = (!is_year()&&!is_month());
+%>
+<xmp id="archives-info" style="display:none"> <%- JSON.stringify(info) %> 
+</xmp>
+
+<% if(!is_year()&&!is_month()){ %> 
+
+<div class="sidebar"> <%- partial('partial/sidebar') %></div>
+<div id="archives">
+    <div class="archive-grid">
+        <div class="head"><%- partial('partial/header.ejs') %> </div>
+        <div class="content-grid">
+            <div></div>
+            <div class="list"><div class="time-line"></div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="foot"><%- partial('partial/footer') %> </div>
+</div>
+
+<% }%> 

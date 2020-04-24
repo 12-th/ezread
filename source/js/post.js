@@ -77,11 +77,15 @@ function TocAddButton()
   $("#post .btn-toc").on('click', TocBtnClick);
 }
 
+function AdjustFootPositon(){
+  $("#post .post-grid").css("min-height",$(window).height()-$("#post .foot").outerHeight());
+}
+
 $(function() {
   // '⇨''⇦'
   TocAddButton();
   setTimeout(function(){
     $("#post .btn-toc").click();
   }, 750);
-  
+  AdjustFootPositon();
 })
