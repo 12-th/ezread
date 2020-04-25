@@ -1,0 +1,65 @@
+.sidebar-container
+{
+    position: fixed;
+    left: 20px;
+    top:0px;
+    z-index: 100;
+}
+
+#tag-index .tag-grid{
+    display:grid;
+    grid-template-columns: 175px auto 50px;
+    width: 100%;
+    height: 90vh;
+}
+
+#tag-index .list-tags{
+    border-right: 1px dotted black;
+    overflow: auto;
+    color: #343a40;
+}
+
+#tag-index .list-tags ul{
+    padding: 0;
+}
+
+#tag-index .list-tags .tag-list-item{
+    list-style:none;
+    text-align: right;
+}
+
+#tag-index .list-tags a{
+    text-decoration: none;
+    color: #343a40;
+    font-size: 20px;
+    display: block;
+    padding-right: 20px;
+}
+
+#tag-index .list-tags .tag-list-item::after{
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to left, #37b24d, #37b24d40);
+    display: block;
+    content: "";
+}
+
+#tag-index .list-tags .chosen{
+    background-color: #dee2e6;
+}
+
+#tag-index .list-tags .chosen::after{
+    height: 2px;
+    width: 100%;
+    background-image: linear-gradient(to left, #f03e3e, #f03e3ea0);
+    display: block;
+    content: "";
+}
+
+#tag-index .list-tags a:hover{
+    background-color: #f8f9fa;
+}
+
+#tag-index .timeline-parent{
+    padding: 30px;
+}

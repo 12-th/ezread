@@ -2,10 +2,12 @@
 <%- css('css/footer.css') %>
 <%- css('css/sidebar.css') %> 
 <%- css('css/header.css') %> 
+<%- css('css/timeline.css') %> 
 <%- js('js/archive.js') %>
 <%- js('js/footer.js') %> 
 <%- js('js/sidebar.js') %> 
 <%- js('js/header.js') %> 
+<%- js('js/timeline.js') %> 
 
 <% let info = {posts:[], next:"", isIndex:false} %>
 <% site.posts.forEach(function(post, i){
@@ -28,7 +30,7 @@
         <div class="head"><%- partial('partial/header.ejs') %> </div>
         <div class="content-grid">
             <div></div>
-            <div class="list"><div class="time-line"></div></div>
+            <div class="timeline-parent"><%- partial('partial/timeline.ejs') %> </div>
             <div></div>
         </div>
     </div>
