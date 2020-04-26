@@ -44,14 +44,14 @@ function TocBtnClick(){
   let grid = $("#post .post-grid");
   if($(this).text()=='⇦')
   {
-    toc.animate({left:-toc.width()}, 500);
-    grid.animate({left:-toc.width()/2}, 500);
+    toc.css({left:-toc.width()});
+    grid.css({left:-toc.width()/2});
     $(this).text('⇨');
   }
   else
   {
-    toc.animate({left:0}, 500);
-    grid.animate({left:0}, 500);
+    toc.css({left:0});
+    grid.css({left:0});
     $(this).text('⇦');
   }
 }
@@ -77,15 +77,15 @@ function TocAddButton()
   $("#post .btn-toc").on('click', TocBtnClick);
 }
 
-function AdjustFootPositon(){
-  $("#post .post-grid").css("min-height",$(window).height()-$("#post .foot").outerHeight());
+function SetTagLinks(){
+  $("#post .tag-list-item a").each(function(){
+    $(this).attr("href", "/tags/#"+$(this).text());
+  })
 }
 
 $(function() {
   // '⇨''⇦'
+  SetTagLinks();
   TocAddButton();
-  setTimeout(function(){
-    $("#post .btn-toc").click();
-  }, 750);
-  AdjustFootPositon();
+  $("#post .btn-toc").click();
 })

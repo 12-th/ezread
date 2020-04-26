@@ -1,0 +1,21 @@
+
+<%- css('css/category_index.css') %> 
+<%- css('css/timeline.css') %>
+<%- css('css/footer.css') %> 
+<%- css('css/header.css') %> 
+<%- css('css/sidebar.css')  %> 
+<%- js('js/category_index.js') %> 
+<%- js('js/timeline.js') %>
+<%- js('js/footer.js') %> 
+<%- js('js/header.js')  %> 
+<%- js('js/sidebar.js') %> 
+<div class="sidebar-container"><%- partial('partial/sidebar.ejs') %> </div>
+<div id="category-index">
+    <div class="head"><%- partial('partial/header') %> </div>
+    <div class="category-grid">
+        <div class="list-categories"><%- list_categories({show_count:false}) %></div>
+        <div class="timeline-parent"><%- partial('partial/timeline.ejs') %> </div>
+        <div></div>
+    </div>
+    <div class="foot"><%- partial('partial/footer.ejs') %> </div>
+</div>

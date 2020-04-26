@@ -21,19 +21,19 @@
         <div class="post-grid">
             <div class="padding"></div>
             <div class="text">
-                <h1 class='tittle'>
+                <div><h1 class='tittle'>
                     <% if(page.title) { %>
                     <%- page.title %>
                     <% } else { %>
                     <%- config.title %>
                     <% } %>
-                </h1>
+                </h1></div>
+                <div><%- list_tags(page.tags, {show_count:0}) %></div>
                 <%- partial('partial/article', {text: page.content}) %>
             </div>
         </div>
         <div class="foot"><%- partial('partial/footer') %> </div>
     </div>
     <div class="btn-to-top"><%- partial('partial/btn-to-top') %></div>
-    <!-- <span id='btn-content'>&#8678;</span> -->
 </div>
 

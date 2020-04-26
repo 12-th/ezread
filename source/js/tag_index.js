@@ -50,6 +50,13 @@ $(function(){
             TagItemClick($(this));
             return false;
         });
-        $("#tag-index .list-tags a").first().click();
+        let chosenItem = window.location.hash.substring(1).toLowerCase();
+        if(chosenItem=="")
+            $("#tag-index .list-tags a").first().click();
+        else
+            $("#tag-index .list-tags a").each(function(){
+                if($(this).text().toLowerCase()==chosenItem)
+                    $(this).click();
+            });
     }
 });

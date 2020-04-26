@@ -116,7 +116,8 @@
 #post .post-grid{
     position: relative;
     display:grid;
-    grid-template-columns: 250px auto;;
+    grid-template-columns: 250px auto;
+    min-height: 90vh;
 }
 
 #post .padding{
@@ -131,4 +132,32 @@
     position: fixed;
     right: 60px;
     bottom: 50px;
+}
+
+#post .tag-list{
+    margin-top: 30px;
+    padding-bottom: 30px;
+    text-align: right;
+}
+
+#post .tag-list-item{
+    display:inline-block;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#post .tag-list-item a{
+    text-decoration: none;
+    padding:4px 10px;
+    background-color: #f1f3f5;
+    border: 1px solid #e9ecef;
+    border-radius: 22px;
+    font-size: 14px;
+    color: #1971c2;
+}
+
+#post .tag-list-item a:hover{
+    color: #fa5252;
+    background-color: #dee2e6;
 }

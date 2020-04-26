@@ -1,0 +1,16 @@
+<% 
+ let info ={posts:[], next:"", next_link:""};
+    page.posts.forEach(function(post){
+        info.posts.push({date: post.date.format("YYYY-MM-DD hh:mm:ss"),
+                    title: post.title,
+                    url: url_for(post.path)
+                    });
+    });
+    info.next = page.next;
+    info.next_link = page.next_link;
+%> 
+<xmp id="category-info" style="display:none">
+    <%- JSON.stringify(info) %> 
+</xmp>
+
+<span>你是怎么发现这里的？？？</span>
