@@ -79,7 +79,7 @@ function TocAddButton()
 
 function SetTagLinks(){
   $("#post .tag-list-item a").each(function(){
-    $(this).attr("href", "/tags/#"+$(this).text());
+    $(this).attr("href", "/tags/#"+encodeURI($(this).text()));
   })
 }
 

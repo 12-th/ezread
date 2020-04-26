@@ -45,18 +45,19 @@ function InitCategoryBottomLine()
 }
 
 $(function(){
-    InitCategoryBottomLine();
     if($("#category-index .list-categories").children().length<=0)
     {
         SetDefaultTimeLine();
+        InitCategoryBottomLine();
     }
     else
     {
+        InitCategoryBottomLine();
         $("#category-index .list-categories a").on('click',function(e){
             TagItemClick($(this));
             return false;
         });
-        let chosenItem = window.location.hash.substring(1).toLowerCase();
+        let chosenItem = decodeURI(window.location.hash.substring(1)).toLowerCase();
         if(chosenItem=="")
             $("#category-index .list-categories a").first().click();
         else

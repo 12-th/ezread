@@ -50,7 +50,7 @@ $(function(){
             TagItemClick($(this));
             return false;
         });
-        let chosenItem = window.location.hash.substring(1).toLowerCase();
+        let chosenItem = decodeURI(window.location.hash.substring(1)).toLowerCase();
         if(chosenItem=="")
             $("#tag-index .list-tags a").first().click();
         else
