@@ -13,10 +13,14 @@
     margin-right: 10px;
 }
 
+#site-description-wrapper{
+    text-align: right;
+    padding-right: 50px;
+}
+
 #site-description{
-    display: inline-block;
     font-size: 15px;
-    font-family: Consolas;
+    font-family: "STXingkai","STKaiti","Consolas";
     margin-top: 10px;
     margin-right: 10px;
 }

@@ -126,6 +126,7 @@
 #post .text{
     padding-top: 50px;
     padding-bottom:50px;
+    max-width: 80vw;
 }
 
 #post .btn-to-top{
