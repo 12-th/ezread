@@ -19,17 +19,6 @@
     text-decoration: none;
 }
 
-.article-text figure{
-    background-color: #272822;
-    color: #adb5bd;
-    font-family: Consolas;
-    margin:0 20px;
-    margin:5px auto;
-    border-radius: 2px;
-    border-left: 3px solid #0b7285;
-    max-width: inherit;
-}
-
 .article-text .code .line{
     white-space: pre-wrap;
     word-wrap:break-word;
@@ -40,11 +29,6 @@
     color: #495057;
     text-align:right;
     padding-right: 10px;
-    /* display:table-cell; */
-}
-
-.article-text .code{
-    /* display:table-cell; */
 }
 
 .article-text .gutter pre{
@@ -140,12 +124,20 @@
     color: #E6DB74;
 }
 
+.article-text figure{
+    background-color: #272822;
+    color: #adb5bd;
+    font-family: Consolas;
+    margin:0 20px;
+    margin:5px auto;
+    border-radius: 2px;
+    border-left: 3px solid rgb(3, 169, 244);
+    max-width: inherit;
+}
+
 .article-text figure .comment{
     color: #495057;
     font-style: italic;
-}
-
-.article-text table{
 }
 
 .article-text table td{
@@ -170,11 +162,14 @@
 }
 
 .article-text blockquote{
-    background-color: #303030;
+    background-color: #f1f3f5;
     color: #868e96;
-    margin: auto 20px;
     padding-left: 20px;
-    border-left: 3px solid rgb(3, 169, 244);
+    border: 1px solid #dee2e6;
+    border-left: 3px solid #a5d8ff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 7px 0px;
 }
 
 .article-text figure .article-btns{
@@ -187,12 +182,16 @@
     margin-right: 10px;
     border: 1px solid #ffffff00;
     padding:2px 2px;
+    color: #495057;
+    font-size: 15px;
 }
 
 .article-text figure .copy{
     display: inline;
     border: 1px solid #ffffff00;
     padding:2px 2px;
+    color: #495057;
+    font-size: 15px;
 }
 
 .article-text figure .fold:hover{
